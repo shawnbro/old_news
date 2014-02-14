@@ -1,0 +1,2 @@
+# api.rb
+NYTIMES_API_KEY=ENV["NYTIMES_API_KEY"]

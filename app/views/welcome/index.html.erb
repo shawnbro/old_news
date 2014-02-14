@@ -1,0 +1,35 @@
+<!-- index.html.erb -->
+<div class="header">
+  <h1>...Old News...</h1>
+  <h5><em>What has been will be again,<br />
+    what has been done will be done again;<br />
+    there is nothing new under the sun.<br /></em></h5>
+  <p><button><%= link_to "More Headlines", root_path %></button></p>
+</div>
+
+<div class="on_this_day">
+
+  <h2>On this day in <%= @articles[0]["pub_date"][0..3] %>...</h2>
+
+</div>
+
+
+<% @articles.each do |article| %>
+<div class="article">
+  <%  if article["lead_paragraph"].nil?  %>
+    <%  next %>
+  <%  else %>
+    <h3><%= article["headline"]["main"] %><br /></h3>
+    <p><%= article["lead_paragraph"] %></p>
+    <% if logged_in? %>
+     <p><button><%=  link_to "Add to Favorites", new_user_favorite_path(current_user, {headline: article["headline"]["main"], lead_paragraph: article["lead_paragraph"], pub_date: article["pub_date"]}) %></button></p> 
+    <% else %>
+      <p><%= link_to "Add to Favorites", new_user_path %></p>
+    <% end %>
+    </div>
+  <% end %>
+
+<% end %>
+
+
+

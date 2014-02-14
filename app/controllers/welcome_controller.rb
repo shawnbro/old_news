@@ -1,22 +1,32 @@
 # welcome_controller.rb
 class WelcomeController < ApplicationController
+  
   def index
     @articles = generate_date
   end
 
 
-private
+  private
 
   def get_front_page_articles(year, month, day)
     articles = []
     headline_and_lead_paragraph = {}
     date = year.to_s+month.to_s+day.to_s
     #returns front page news from a specific date
-    nyt_results = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&api-key=70c6055f9f80068e5a9a5058008bfa37:13:68818454")
+    nyt_results = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=0&api-key=#{NYTIMES_API_KEY}")
+    nyt_results2 = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=1&api-key=#{NYTIMES_API_KEY}")
     # headline_and_lead_paragraph
     i = 0
     while i < nyt_results["response"]["docs"].count
       nyt_results["response"]["docs"].each do |result|
+        article_info =  Hash["headline", result["headline"], "lead_paragraph", result["lead_paragraph"], "pub_date", result["pub_date"]]
+        articles.push(article_info)
+      end
+      i += 1
+    end
+    i = 0
+    while i < nyt_results2["response"]["docs"].count
+      nyt_results2["response"]["docs"].each do |result|
         article_info =  Hash["headline", result["headline"], "lead_paragraph", result["lead_paragraph"], "pub_date", result["pub_date"]]
         articles.push(article_info)
       end
@@ -36,5 +46,13 @@ private
     end
     year = 1850 + rand(164)
     get_front_page_articles(year, month, day)
+  end
+
+  def load_user
+    return @user = User.find(params[:id])
+  end
+
+  def add_to_favorites(headline, lead_paragraph, pub_date)
+
   end
 end

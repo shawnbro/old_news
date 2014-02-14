@@ -8,6 +8,19 @@
 </head>
 <body>
 
+  <header>
+<%= link_to "Home", root_path %>
+
+<% if logged_in? %>
+  <p><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></p>  
+<% else %>
+  <p><%= link_to("Log In","/login") %></p>
+  <p>or</p>
+  <p><%= link_to "Sign up", new_user_path %></p>
+<% end %>
+
+</header>
+
 <%= yield %>
 
 </body>

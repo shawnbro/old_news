@@ -1,0 +1,10 @@
+<!-- index.html.erb -->
+
+<% @favorites.each do |favorite| %>
+  <div class="favorite">
+    <h3><%=favorite.headline%></h3>
+    <p><%=favorite.lead_paragraph%><p>
+  </div>
+<% end %>
+
+  
