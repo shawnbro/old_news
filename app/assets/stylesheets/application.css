@@ -11,3 +11,107 @@
  *= require_self
  *= require_tree .
  */
+.header {
+  text-align: center;
+  font-family: 'Didact Gothic', serif;
+  font-size: 14px;
+  /*text-shadow: 4px 4px 4px #aaa;*/
+  padding: 10px;
+}
+body {
+  background-color: #E7E7E7;
+}
+
+.main_nav {
+  padding: 15px;
+  text-align: right;
+  font-family: 'Didact Gothic', serif;
+  font-size: 12px;
+}
+
+
+.eclesiastes {
+  font-family: 'Didact Gothic', serif;
+  color: #705027;
+  padding: 25px;
+}
+
+.more_headlines a {
+  background-color: #E7E7E7;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.more_headlines a:hover {
+  color: white;
+  background-color: black;
+}
+
+.on_this_day {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Didact Gothic', serif;
+  font-size: 13px;
+  padding: 25px;
+}
+
+.article{
+  border: 250px;
+}
+.headline {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Didact Gothic', serif;
+  font-size: 12px;
+  padding: 20px;
+  width: 50%;
+}
+
+.lead_paragraph {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Didact Gothic', serif;
+  font-size: 12px;
+  padding: 0px;
+  width: 40%;
+  background: white;
+}
+
+.lead_paragraph a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.lead_paragraph a:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+.nav_bar {
+  padding: .2em 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav_bar_li {
+  display: block;
+}
+
+.nav_bar_li a  {
+  text-decoration: none;
+  color: black;
+}
+
+.nav_bar_li a:hover {
+  background-color: black;
+  color: white;
+}
+
+.article {
+  font-family: 'Varela+Round', sans-serif;
+}
