@@ -76,6 +76,7 @@ body {
   padding: 0px;
   width: 40%;
   background: white;
+  padding: 10px 0px 10px 0px;
 }
 
 .lead_paragraph a {
@@ -86,7 +87,7 @@ body {
 
 .lead_paragraph a:hover {
   background-color: black;
-  color: white;
+  color: white; 
 }
 
 
@@ -113,5 +114,22 @@ body {
 }
 
 .article {
-  font-family: 'Varela+Round', sans-serif;
+  padding: 20px 0px 20px 0px;
+}
+
+.form {
+  font-family: 'Didact Gothic', serif;
+  font-size: 12px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#errors {
+  font-family: 'Didact Gothic', serif;
+  font-size: 12px;
+  text-align: center;
+  margin: 0 auto;
+}
+#errors li {
+  display: block;
 }
