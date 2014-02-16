@@ -135,3 +135,24 @@ body {
 #errors li {
   display: block;
 }
+
+.footer {
+  padding: 15px;
+  font-family: 'Didact Gothic', serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+.footer_list li {
+  display: inline;
+  padding: 0px 15px 0px 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: white;
+  background-color: black;
+}
