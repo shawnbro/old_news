@@ -2,9 +2,13 @@
 
 <div class="favorite">
   <div class="headline"><h2><%= current_user.first_name %>'s Favorites</h2></div>
-  <% @favorites.each do |favorite| %>
-      <div class="headline"><h3><%=favorite.headline%></h3></div>
-      <div class="lead_paragraph"><p><%=favorite.lead_paragraph%><p></div>
+  <% if @favorites.empty?%>
+    <div class="lead_paragraph"><p><%= link_to "You do not have any favorites. Return Home to add some.", root_path %> </p></div>
+  <% else %>
+    <% @favorites.each do |favorite| %>
+        <div class="headline"><h3><%=favorite.headline%></h3></div>
+        <div class="lead_paragraph"><p><%=favorite.lead_paragraph%><p></div>
+    <% end %>
   <% end %>
 </div>
 

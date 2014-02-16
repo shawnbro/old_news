@@ -51,8 +51,4 @@ class WelcomeController < ApplicationController
   def load_user
     return @user = User.find(params[:id])
   end
-
-  def add_to_favorites(headline, lead_paragraph, pub_date)
-
-  end
 end

@@ -36,9 +36,14 @@ body {
   padding: 25px;
 }
 
+.eclesiastes_name{
+  text-align: center;
+  font-size: 10px;
+}
+
 .more_headlines a {
   background-color: #E7E7E7;
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
   padding: 10px;
 }
@@ -113,9 +118,6 @@ body {
   color: white;
 }
 
-.article {
-  padding: 20px 0px 20px 0px;
-}
 
 .form {
   font-family: 'Didact Gothic', serif;
