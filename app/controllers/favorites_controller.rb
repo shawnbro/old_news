@@ -30,6 +30,11 @@ class FavoritesController < ApplicationController
     redirect_to user_favorites_path
   end
 
+  def send_favorite
+    UserMailer.send_headline(params[:user_id], params[:id]).deliver
+    redirect_to user_grams_path
+  end
+
   private 
 
   def load_user
@@ -43,6 +48,5 @@ end
 def load_favorite
   return @favorite = Favorite.find_by(id: params[:id])
 end
-
-
 end
+

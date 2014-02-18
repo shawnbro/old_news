@@ -2,7 +2,9 @@ OldNews::Application.routes.draw do
 
   resources :users do 
     resources :contacts
-    resources :favorites
+    resources :favorites do 
+      get "send_favorite"
+    end
   end
 
   root 'welcome#index'

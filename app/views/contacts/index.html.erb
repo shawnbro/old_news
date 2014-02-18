@@ -1,0 +1,26 @@
+<!-- index.html.erb -->
+<div class="headline">
+<h3><%= User.find(session[:user_id]).first_name %>'s Contacts</h3>
+</div>
+
+<% if @contacts.nil? %>
+<div class="headline">
+  <h4>You Don't Have Any Contacts </h4>
+</div>
+<div class="lead_paragraph">
+  <p><%= link_to "Click Here to Add a Contact", new_user_contact_path(current_user) %></p>
+  <% else %>
+    <div class="lead_paragraph">
+      <ul>
+        <% contacts = Contact.where(user_id: @contacts.user_id ) %>
+        <% contacts.each do |contact|  %>
+        <li><%= contact.email  %></li>
+        <ul>
+          <li><%= link_to "Delete Contact", user_contact_path(current_user, {id: contact.id}), method: "delete" %>
+      </li>
+          <li><%= link_to "Edit Contact", edit_user_contact_path(current_user, {id: contact.id}) %></li>
+      
+    <% end %>
+  <% end %>
+  </ul>
+</div>

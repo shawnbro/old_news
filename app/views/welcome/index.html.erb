@@ -23,6 +23,17 @@
         <% if logged_in? %>  
         <%=  link_to "#{article["lead_paragraph"]}", new_user_favorite_path(current_user, {headline: article["headline"]["main"], lead_paragraph: article["lead_paragraph"], pub_date: article["pub_date"]}) %>
 
+        <div class="share_buttons"><ul>
+          <li>
+            <a class="twitter_popup" href="https://twitter.com/share?text=On this day in <%= article["pub_date"][0..3] %>:<%=article["headline"]["main"]%>">tweet • </a>
+          </li>
+          <li>
+            <a href="http://www.tumblr.com/share/quote?quote=On this day in <%= article["pub_date"][0..3] %>:<%=article["headline"]["main"]%> <%= article["lead_paragraph"] %>" title="Share on Tumblr" >tumblr • </a>
+          </li>
+
+          </ul>
+       </div>
+
         <% else %>
         <%= link_to "#{article["lead_paragraph"]}", new_user_path %>
         <div class="share_buttons"><ul>

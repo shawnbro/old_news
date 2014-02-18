@@ -10,6 +10,16 @@ class UserMailer < ActionMailer::Base
   def daily_headlines(users)
     @users = User.all
     @url = "http://localhost:3000"
-    mail(to: @users.email, subject: 'Daily Headlines from Old News')
+    @users.each do |user|
+    mail(to: users.email, subject: 'Daily Headlines from Old News')
+    end
+  end
+
+    def send_headline(user_id, favorite_id)
+      # binding.pry
+      @contacts = Contact.where(user_id: user_id)
+      @favorite_id = Favorite.find_by(id: favorite_id)
+
+      mail(to: @contacts.email, subject: 'Daily Historical Headlines from Your Friend')
   end
 end
