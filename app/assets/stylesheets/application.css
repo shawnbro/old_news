@@ -14,38 +14,39 @@
 .header {
   text-align: center;
   font-family: 'Didact Gothic', serif;
-  font-size: 14px;
+  font-size: 16px;
   /*text-shadow: 4px 4px 4px #aaa;*/
-  padding: 10px;
+  padding: 12px;
 }
+
 body {
   background-color: #E7E7E7;
 }
 
 .main_nav {
-  padding: 15px;
+  padding: 18px;
   text-align: right;
   font-family: 'Didact Gothic', serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 
 .eclesiastes {
   font-family: 'Didact Gothic', serif;
   color: #705027;
-  padding: 25px;
+  padding: 24px;
 }
 
 .eclesiastes_name{
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .more_headlines a {
   background-color: #E7E7E7;
   text-decoration: underline;
   color: black;
-  padding: 10px;
+  padding: 12px;
 }
 
 .more_headlines a:hover {
@@ -57,19 +58,20 @@ body {
   text-align: center;
   margin: 0 auto;
   font-family: 'Didact Gothic', serif;
-  font-size: 13px;
-  padding: 25px;
+  font-size: 15px;
+  padding: 24px;
 }
 
 .article{
   border: 250px;
 }
+
 .headline {
   text-align: center;
   margin: 0 auto;
   font-family: 'Didact Gothic', serif;
-  font-size: 12px;
-  padding: 20px;
+  font-size: 14px;
+  padding: 24px;
   width: 50%;
 }
 
@@ -77,11 +79,11 @@ body {
   text-align: center;
   margin: 0 auto;
   font-family: 'Didact Gothic', serif;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0px;
   width: 40%;
   background: white;
-  padding: 10px 0px 10px 0px;
+  padding: 12px 0px 6px 0px;
 }
 .lead_paragraph li {
   text-align: center;
@@ -98,7 +100,6 @@ body {
   background-color: black;
   color: white; 
 }
-
 
 .nav_bar {
   padding: .2em 0;
@@ -123,7 +124,7 @@ body {
 
 .form {
   font-family: 'Didact Gothic', serif;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   margin: 0 auto;
  /* width: 40%;*/
@@ -131,9 +132,9 @@ body {
 
 .form li {
   display: inline;
-  padding: 12px 0px 12px 0px;
+  padding: 6px 0px 6px 0px;
   margin: 0 auto;
-  width: 50%;
+  /*width: 50%;*/
 }
 
 .submit {
@@ -142,7 +143,7 @@ body {
 
 #errors {
   font-family: 'Didact Gothic', serif;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   margin: 0 auto;
 }
@@ -151,15 +152,15 @@ body {
 }
 
 .footer {
-  padding: 15px;
+  padding: 18px;
   font-family: 'Didact Gothic', serif;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
 }
 
 .footer_list li {
   display: inline;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 14px 0px 14px;
 }
 
 a {
@@ -171,16 +172,26 @@ a:hover {
   background-color: black;
 }
 
+.share_buttons {
+  text-align: right;
+  padding: 0px 0px 0px 12px;
+  width: 50%;
+  vertical-align: right;
+  /*position: absolute;*/
+  font-size: 14px
+}
+
 .share_buttons li {
-  display: inline-block;
-  text-align: center;
+  display: inline;
+  text-align: right;
   margin: 0 auto;
+  font-size: 14px;
 }
 
 #new_form li{
   display: inline-block;
   margin: 0 auto;
-  width: 50%
+  width: 50%;
   text-align: center;
 }
  

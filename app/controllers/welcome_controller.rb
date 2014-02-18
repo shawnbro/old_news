@@ -16,23 +16,31 @@ class WelcomeController < ApplicationController
     nyt_results = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=0&api-key=#{NYTIMES_API_KEY}")
     nyt_results2 = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=1&api-key=#{NYTIMES_API_KEY}")
     # headline_and_lead_paragraph
-    i = 0
-    while i < nyt_results["response"]["docs"].count
-      nyt_results["response"]["docs"].each do |result|
-        article_info =  Hash["headline", result["headline"], "lead_paragraph", result["lead_paragraph"], "pub_date", result["pub_date"]]
-        articles.push(article_info)
+
+    if nyt_results["response"]["docs"].nil?
+      generate_date
+
+    else
+
+      i = 0
+      while i < nyt_results["response"]["docs"].count
+        nyt_results["response"]["docs"].each do |result|
+          article_info =  Hash["headline", result["headline"], "lead_paragraph", result["lead_paragraph"], "pub_date", result["pub_date"]]
+          articles.push(article_info)
+        end
+        i += 1
       end
-      i += 1
-    end
-    i = 0
-    while i < nyt_results2["response"]["docs"].count
-      nyt_results2["response"]["docs"].each do |result|
-        article_info =  Hash["headline", result["headline"], "lead_paragraph", result["lead_paragraph"], "pub_date", result["pub_date"]]
-        articles.push(article_info)
+      i = 0
+      while i < nyt_results2["response"]["docs"].count
+        nyt_results2["response"]["docs"].each do |result|
+          article_info =  Hash["headline", result["headline"], "lead_paragraph", result["lead_paragraph"], "pub_date", result["pub_date"]]
+          articles.push(article_info)
+        end
+        i += 1
       end
-      i += 1
+      articles.uniq!
     end
-    articles.uniq!
+    
   end
 
   def generate_date

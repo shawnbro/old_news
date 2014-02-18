@@ -6,7 +6,8 @@ class FavoritesController < ApplicationController
 
 
   def index
-    @favorites=Favorite.where(user_id: params[:user_id])
+      @favorites=Favorite.where(user_id: session[:user_id])
+      render :index
   end
 
   def new

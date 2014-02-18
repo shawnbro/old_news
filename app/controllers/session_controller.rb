@@ -18,6 +18,7 @@ class SessionController < ApplicationController
   def destroy
     session[:user_id] = nil
     session.delete(:key)
+    session.destroy
     redirect_to root_path
   end
 

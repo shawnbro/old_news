@@ -3,17 +3,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta content='text/css; charset=UTF-8' http-equiv='Content-Type' />
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>Welcome to example.com, <%= @user.first_name %></h1>
+    <div class="headline">
+    <h1>Welcome to example.com, <%= @user.first_name %></h1></div>
+  <div class="lead_paragraph">
     <p>
       You have successfully signed up to example.com,
-      your username is: <%= @user.email %>.<br/>
+      your username is: <%= @user.email %>.You will receive a daily email with a list of NY Times headlines from today's date in a random year.<br/>
     </p>
     <p>
       To login to the site, just follow this link: <%= @url %>.
     </p>
-    <p>Thanks for joining and have a great day!</p>
+    <p>Thanks for joining and have a great day!</p></div>
   </body>
 </html>
