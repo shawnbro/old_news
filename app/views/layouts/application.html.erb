@@ -16,11 +16,14 @@
 
     <% if logged_in? %>
       <li class="nav_bar_li"><%=link_to("My Favorites", user_favorites_path(current_user))%></li>
-      <li class="nav_bar_li"><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></li>  
+      <li class="nav_bar_li"><%=link_to("Edit Info", edit_user_path(current_user)) %>
+      <li class="nav_bar_li"><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></li> 
+      <li class="nav_bar_li"><%= link_to("About Old News", about_path) %> 
     <% else %>
       <li class="nav_bar_li"><%= link_to("Log In","/login") %></li>
       <li class="nav_bar_li">or</li>
       <li class="nav_bar_li"><%= link_to "Sign up", new_user_path %></li>
+      <li class="nav_bar_li"><%= link_to("About Old News", about_path) %>
     <% end %>
   </ul>
 </div>
@@ -41,6 +44,7 @@
     <ul class="footer_list">
       <li>Created by <a href="https://twitter.com/s_d_br0_o">s_d_br0_o</a></li>
       <li><%= link_to "About Old News", about_path %></li>
+      <li><%= link_to "Home", root_path %>
   </footer></div>
 
 </body>

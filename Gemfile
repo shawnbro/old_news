@@ -43,6 +43,8 @@ gem 'httparty'
 
 gem 'pg'
 
+gem 'twitter'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

@@ -83,6 +83,10 @@ body {
   background: white;
   padding: 10px 0px 10px 0px;
 }
+.lead_paragraph li {
+  text-align: center;
+  width: 50%;
+}
 
 .lead_paragraph a {
   text-decoration: none;
@@ -94,8 +98,6 @@ body {
   background-color: black;
   color: white; 
 }
-
-
 
 
 .nav_bar {
@@ -124,6 +126,18 @@ body {
   font-size: 12px;
   text-align: center;
   margin: 0 auto;
+ /* width: 40%;*/
+}
+
+.form li {
+  display: inline;
+  padding: 12px 0px 12px 0px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.submit {
+  background-color: white;
 }
 
 #errors {
@@ -156,3 +170,18 @@ a:hover {
   color: white;
   background-color: black;
 }
+
+.share_buttons li {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#new_form li{
+  display: inline-block;
+  margin: 0 auto;
+  width: 50%
+  text-align: center;
+}
+ 
+

@@ -22,10 +22,15 @@
       <%= link_to "#{article["lead_paragraph"]}", new_user_path %>
     <% end %>
     </div>
+
+    <div class="share_buttons"><ul>
+    <li>
+      <a class="twitter_popup" href="https://twitter.com/share?text=On this day in <%= article["pub_date"][0..3] %>:<%=article["headline"]["main"]%>"> Tweet</a>
+    </li>
+  </ul>
+  </div>
   </div>
   <% end %>
 
 <% end %>
-
-
 

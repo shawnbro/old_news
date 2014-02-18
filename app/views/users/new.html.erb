@@ -1,15 +1,17 @@
 <!-- new.html.erb -->
-<h2>Join Old News</h2>
+<div class="headline"><h2>Join Old News</h2></div>
 
-<% unless @user.nil? || @user.id.nil? %>
+<% unless @user.errors.messages.empty? %>
   <div id="errors">
     <h3>Errors!</h3>
     <ul>
-      <% @user.errors.messages.each do |field,error| %>
+      <% @user.errors.messages.each do |field, error| %>
         <li><em><%= "#{field.capitalize} #{error.first}!" %></em></li>
       <% end %>
     </ul>
   </div>
 <% end %>
 
-<%= render "form" %>
+<div class="form" id="new_form">
+<%= render "form" %></div>
+

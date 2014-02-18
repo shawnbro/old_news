@@ -8,13 +8,13 @@
   </div>
 <% end %>
 
-<div class="form">
+<div class="form"><ul>
   <%= form_tag "/session" do %>
-    <%= label_tag :email %>:
-    <%= email_field_tag :email %>
-    <%= label_tag :password %>:
-    <%= password_field_tag :password %>
+    <li><%= label_tag :email %>:</li>
+    <li><%= email_field_tag :email %></li>
+    <li><%= label_tag :password %>:</li>
+    <li><%= password_field_tag :password %></li>
     
-    <%= submit_tag "Log in!" %>
+    <%= submit_tag "Log in!" %></ul>
   <% end %>
 </div>

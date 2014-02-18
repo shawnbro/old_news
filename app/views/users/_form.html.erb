@@ -1,24 +1,28 @@
 <!-- _form.html.erb -->
-<%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <br/>
+<div class="form">
+  <ul>
+    <%= form_for @user do |f| %>
+      <li><%= f.label :email %></li>
+      <li><%= f.email_field :email %></li>
+      <br/>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br/>
+      <li><%= f.label :password %></li>
+      <li><%= f.password_field :password %></li>
+      <br/>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-  <br/>
+      <li><%= f.label :password_confirmation %></li>
+      <li><%= f.password_field :password_confirmation %></li>
+      <br/>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <br/>
+      <li><%= f.label :first_name %></li>
+      <li><%= f.text_field :first_name %></li>
+      <br/>
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <br/>
+      <li><%= f.label :last_name %></li>
+      <li><%= f.text_field :last_name %></li>
+      <br/>
 
-  <%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
-<% end %>
+      <%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
+    <% end %>
+  </ul>
+</div>

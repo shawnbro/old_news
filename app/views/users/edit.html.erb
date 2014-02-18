@@ -1,0 +1,20 @@
+<!-- edit.html.erb -->
+
+<h2 class="headline">Update user <%= @user.email %></h2>
+
+<% unless @update_worked %>
+  <div id="errors">
+    <h3>Errors!</h3>
+    <ul>
+      <% @user.errors.messages.each do |field,error| %>
+        <li><em><%= "#{field.capitalize} #{error.first}!" %></em></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= render "form" %>
+
+<div class="headline"><%= form_tag user_path(@user), method: "delete" do %>
+  <%= submit_tag("Delete Account") %>
+<% end %>

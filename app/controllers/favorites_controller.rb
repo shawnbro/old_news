@@ -1,6 +1,9 @@
 # favorites_controller.rb
 class FavoritesController < ApplicationController
-  before_action(:load_user, only: [:new, :create] )
+  before_action(:load_user, only: [:new, :create, :show] )
+  before_action(:load_favorite, only: [:show, :destroy])
+  
+
 
   def index
     @favorites=Favorite.where(user_id: params[:user_id])
@@ -17,14 +20,28 @@ class FavoritesController < ApplicationController
     redirect_to user_favorites_path
   end
 
+  def show
+    @favorite = Favorite.find_by(id: params[:id])
+  end
+
+  def destroy
+    @favorite.destroy
+    redirect_to user_favorites_path
+  end
+
   private 
 
   def load_user
     return @user = User.find_by(id: params[:user_id])
   end
 
-def create_favorite
-
+def user_params
+  params.require(:user).permit(:email, :first_name, :last_name, :dob, :gender, :facebook_link, :password, :password_confirmation)
 end
+
+def load_favorite
+  return @favorite = Favorite.find_by(id: params[:id])
+end
+
 
 end

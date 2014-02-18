@@ -1,5 +1,5 @@
 OldNews::Application.routes.draw do
-  resources :users do 
+  resources :users, except: :show do 
     resources :contacts
     resources :favorites
   end

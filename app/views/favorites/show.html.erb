@@ -1,0 +1,14 @@
+<!-- show.html.erb -->
+<div class="headline">
+<h2>On this day in <%= @favorite.pub_date.year %></h2>
+<h3><%= @favorite.headline %></h3>
+</div>
+<div class="lead_paragraph">
+  <p><%= @favorite.lead_paragraph  %></p>
+
+
+<%= form_tag user_favorite_path(current_user, {id: @favorite.id}), method: "delete" do %>
+  <%= submit_tag("Delete Favorite") %>
+  <% end %>
+</div>
+</div>

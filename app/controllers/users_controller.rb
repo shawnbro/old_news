@@ -12,9 +12,24 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to user_path(@user)
+      UserMailer.welcome_email(@user).deliver
+      redirect_to root_path
     else
       render(:new)
+    end
+  end
+
+  def edit
+    @update_worked = true
+  end
+
+  def update
+    @update_worked = @user.update(user_params)
+    
+    if @update_worked
+      redirect_to root_path
+    else
+      render(:edit)
     end
   end
 

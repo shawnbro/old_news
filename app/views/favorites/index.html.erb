@@ -8,7 +8,7 @@
     <% @favorites.each do |favorite| %>
         <div class="headline">
           <h3>On <%= favorite.pub_date.month %>/<%= favorite.pub_date.day%>/<%= favorite.pub_date.year %></h3>
-          <h3><%=favorite.headline%></h3></div>
+          <h3><%=link_to "#{favorite.headline}", user_favorite_path(current_user, {id: favorite.id, headline: favorite.headline, lead_paragraph: favorite.lead_paragraph, pub_date: favorite.pub_date})%></h3></div>
         <div class="lead_paragraph"><p><%=favorite.lead_paragraph%><p></div>
     <% end %>
   <% end %>
