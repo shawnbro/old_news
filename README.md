@@ -24,7 +24,7 @@ I created this web application for a project in the Web Development Intensive he
 
 The site uses the NYTimes article search API to return random headline articles from today's date in a random year.
 
-The design and style of the site was inspired by Jacob Harris' Times Haiku Generator
+The design and style of the site was inspired by Jacob Harris' <a href="http://haiku.nytimes.com/">Times Haiku Generator</a>
 
 Hope he doesn't mind...
 <br />
