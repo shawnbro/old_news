@@ -80,7 +80,7 @@ body {
   padding: 0px;
   width: 40%;
   background: white;
-  padding: 12px 0px 6px 0px;
+  padding: 12px;
 }
 
 
@@ -160,14 +160,25 @@ body {
 }
 
 .footer ul {
-  width: 100%;
   text-align: center;
 
 }
 
+.footer_list {
+  padding: 12px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.footer_list ul {
+  padding: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
 .footer_list li {
   display: inline;
-  padding: 0px 24px 0px 24px;
+  padding: 24px;
 }
 
 a {

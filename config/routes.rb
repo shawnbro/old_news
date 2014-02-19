@@ -15,5 +15,7 @@ OldNews::Application.routes.draw do
 
   get "/about", to: "about#index"
 
+  get "/coming_soon", to: "coming_soon#index"
+
 
 end
