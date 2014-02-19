@@ -215,5 +215,9 @@ a:hover {
   text-align: center;
 }
 
+#contacts_ul li {
+  display: block;
+}
+
  
 

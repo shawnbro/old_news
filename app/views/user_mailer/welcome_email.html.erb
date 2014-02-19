@@ -9,10 +9,10 @@
   </head>
   <body>
     <div class="headline">
-    <h1>Welcome to example.com, <%= @user.first_name %></h1></div>
+    <h1>Welcome to Old News, <%= @user.first_name %></h1></div>
   <div class="lead_paragraph">
     <p>
-      You have successfully signed up to example.com,
+      You have successfully signed up to Old News App,
       your username is: <%= @user.email %>.You will receive a daily email with a list of NY Times headlines from today's date in a random year.<br/>
     </p>
     <p>
@@ -20,4 +20,31 @@
     </p>
     <p>Thanks for joining and have a great day!</p></div>
   </body>
+
+  <div class="on_this_day">
+
+  <h2>On this day in <%= @articles[0]["pub_date"][0..3] %>...</h2>
+
+</div>
+
+
+<% @articles.each do |article| %>
+
+<div class="article">
+
+  <%  if article["lead_paragraph"].nil?  %>
+    <%  next %>
+  <%  else %>
+    <div class="article_space">
+      <div class="headline">
+        <h3><%= article["headline"]["main"] %><br /></h3></div>
+
+      <div class="lead_paragraph">
+        <p><%= article["lead_paragraph"] %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+<% end %>
 </html>

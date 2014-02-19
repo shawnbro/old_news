@@ -11,14 +11,15 @@
   <p><%= link_to "Click Here to Add a Contact", new_user_contact_path(current_user) %></p>
   <% else %>
     <div class="lead_paragraph">
-      <ul>
+      <p><%= link_to "Add Contact", new_user_contact_path(current_user) %></p>
+      <ul id="contacts_ul">
         <% contacts = Contact.where(user_id: @contacts.user_id ) %>
         <% contacts.each do |contact|  %>
         <li><%= contact.email  %></li>
         <ul>
           <li><%= link_to "Delete Contact", user_contact_path(current_user, {id: contact.id}), method: "delete" %>
       </li>
-          <li><%= link_to "Edit Contact", edit_user_contact_path(current_user, {id: contact.id}) %></li>
+          <li><%= link_to "Edit Contact", edit_user_contact_path(current_user, {id: contact.id}) %></li></ul>
       
     <% end %>
   <% end %>
