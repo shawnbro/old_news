@@ -15,11 +15,13 @@ class UserMailer < ActionMailer::Base
     end
   end
 
-    def send_headline(user_id, favorite_id)
-      # binding.pry
-      @contacts = Contact.where(user_id: user_id)
-      @favorite_id = Favorite.find_by(id: favorite_id)
+  def send_favorite(user_id, favorite_id)
+    @url = "http://localhost:3000/"
+    @favorite = Favorite.find_by(id: favorite_id)
+    @contacts = Contact.where(user_id: user_id)
+    @contacts.each do |contact|
+      mail(to: contact.email, subject: 'On this day in')
+    end
 
-      mail(to: @contacts.email, subject: 'Daily Historical Headlines from Your Friend')
   end
 end

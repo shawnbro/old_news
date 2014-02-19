@@ -1,8 +1,8 @@
 # user.rb
 class User < ActiveRecord::Base
 
-  has_many :contacts
-  has_many :favorites
+  has_many :contacts, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true

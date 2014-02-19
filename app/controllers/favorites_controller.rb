@@ -31,8 +31,8 @@ class FavoritesController < ApplicationController
   end
 
   def send_favorite
-    UserMailer.send_headline(params[:user_id], params[:id]).deliver
-    redirect_to user_grams_path
+      UserMailer.send_favorite(params[:user_id], params[:favorite_id]).deliver
+      redirect_to user_favorites_path
   end
 
   private 

@@ -1,0 +1,18 @@
+<!-- send_headline.html.erb -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Old News</h1>
+    <h4><i>NY Times Headlines • Today's Date • Random Year</i></h4>
+
+      <h2>On this date in <%= @favorite.pub_date.year %></h2>
+    
+      <p><%= @favorite.headline %></p>
+    <br />
+    <p><%= @favorite.lead_paragraph %></p>
+    <h5><a href="<%= @url %>">Check out more headlines and register by clicking here.</a></h5>
+  </body>
+</html>

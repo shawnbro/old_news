@@ -7,9 +7,10 @@
   <% else %>
     <% @favorites.each do |favorite| %>
         <div class="headline">
-          <h3>On <%= favorite.pub_date.month %>/<%= favorite.pub_date.day%>/<%= favorite.pub_date.year %></h3>
+          <h2><strong>On <%= favorite.pub_date.month %>/<%= favorite.pub_date.day%>/<%= favorite.pub_date.year %></strong><br /></h3>
           <h3><%=link_to "#{favorite.headline}", user_favorite_path(current_user, {id: favorite.id, headline: favorite.headline, lead_paragraph: favorite.lead_paragraph, pub_date: favorite.pub_date})%></h3></div>
-        <div class="lead_paragraph"><p><%=favorite.lead_paragraph%><p></div>
+        <div class="lead_paragraph"><p><%=favorite.lead_paragraph%></p>
+
         <div class="share_buttons"><ul>
           <li>
             <a class="twitter_popup" href="https://twitter.com/share?text=On this day in <%= favorite.pub_date.year %>:<%=favorite.headline%>">tweet • </a>
@@ -18,13 +19,19 @@
             <a href="http://www.tumblr.com/share/quote?quote=On this day in <%= favorite.pub_date %>:<%=favorite.headline%> <%= favorite.lead_paragraph %>" title="Share on Tumblr" >tumblr • </a>
           </li>
           <li>
-            <%= link_to "email", user_favorite_send_favorite_path(current_user, favorite.id) %>
+            <% if current_user.contacts.empty? %>
+              <%= link_to "email •", new_user_contact_path(current_user) %>
+            <% else %>
+              <%= link_to "email •", user_favorite_send_favorite_path(current_user, favorite.id) %>
+            <% end %>
           </li>
-
+          <li>
+            <%= link_to "delete", user_favorite_path(current_user, {id: favorite.id}), method: "delete" %></li>
           </ul>
-    <% end %>
-            
-       </div>
+        </div>
+      </div>
+
+    <% end %>      
   <% end %>
 </div>
 

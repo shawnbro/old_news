@@ -62,9 +62,6 @@ body {
   padding: 24px;
 }
 
-.article{
-  border: 250px;
-}
 
 .headline {
   text-align: center;
@@ -85,10 +82,7 @@ body {
   background: white;
   padding: 12px 0px 6px 0px;
 }
-.lead_paragraph li {
-  text-align: center;
-  width: 50%;
-}
+
 
 .lead_paragraph a {
   text-decoration: none;
@@ -127,14 +121,20 @@ body {
   font-size: 14px;
   text-align: center;
   margin: 0 auto;
- /* width: 40%;*/
+  width: 100%;
+}
+
+.form ul {
+  margin: 0 auto;
+  width: 100%;
+  padding: 6px;
 }
 
 .form li {
   display: inline;
-  padding: 6px 0px 6px 0px;
+  padding: 6px 6px 6px 6px;
   margin: 0 auto;
-  /*width: 50%;*/
+  width: 50%;
 }
 
 .submit {
@@ -156,11 +156,18 @@ body {
   font-family: 'Didact Gothic', serif;
   font-size: 12px;
   text-align: center;
+  margin: 0 auto;
+}
+
+.footer ul {
+  width: 100%;
+  text-align: center;
+
 }
 
 .footer_list li {
   display: inline;
-  padding: 0px 14px 0px 14px;
+  padding: 0px 24px 0px 24px;
 }
 
 a {
@@ -173,18 +180,19 @@ a:hover {
 }
 
 .share_buttons {
-  text-align: right;
-  padding: 0px 0px 0px 12px;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
   width: 50%;
-  vertical-align: right;
-  /*position: absolute;*/
-  font-size: 14px
+  margin: 0 auto;
+}
+
+.share_buttons ul {
+  margin: 0 auto;
+  width: 50%;
 }
 
 .share_buttons li {
   display: inline;
-  text-align: right;
-  margin: 0 auto;
   font-size: 12px;
 }
 
