@@ -22,7 +22,7 @@
             <% if current_user.contacts.empty? %>
               <%= link_to "email •", new_user_contact_path(current_user) %>
             <% else %>
-              <%= link_to "email •", coming_soon_path %><!-- user_favorite_send_favorite_path(current_user, favorite.id)  -->
+              <%= link_to "email •", user_favorite_send_favorite_path(current_user, favorite.id) %><!-- coming_soon_path  -->
             <% end %>
           </li>
           <li>
