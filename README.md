@@ -1,28 +1,22 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#Old News App
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##GA WDI NYC Jan/Feb 2014 Project 1
+
+
+
+###NY Times Headlines • Today's Date • Random Year
+
+
+
+#####I created this web application for a project in the Web Development Intensive held at General Assembly in New York City in February, 2014.
+
+#####The site uses the NYTimes article search API to return random headline articles from today's date in a random year.
+
+#####The design and style of the site was inspired by Jacob Harris' Times Haiku Generator
+
+#####Hope he doesn't mind...
+
+###API's:
+#####NYT Article Search API.
+#####The Development Mode Uses Mail Catcher.
