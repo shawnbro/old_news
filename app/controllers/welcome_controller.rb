@@ -17,7 +17,7 @@ class WelcomeController < ApplicationController
     nyt_results2 = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=1&api-key=#{NYTIMES_API_KEY}")
     # headline_and_lead_paragraph
 
-    if nyt_results["response"]["docs"].nil?
+    if nyt_results["response"]["docs"].count == 0
       generate_date
 
     else
