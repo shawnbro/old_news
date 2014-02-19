@@ -8,7 +8,6 @@ development:
   encoding: unicode
   database: old_news_development
   host: localhost
-  username: shawnbroukhim
   pool: 5
   timeout: 5000
 
