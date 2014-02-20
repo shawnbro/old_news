@@ -54,5 +54,10 @@ Hope he doesn't mind...
 A full list of user stories/bug fixes/chores can be found by looking at <a href="https://www.pivotaltracker.com/s/projects/1015678"> this Pivotal Tracker Project</a>
 <br />
 <br />
+###ERD
+<br />
+Users --< Favorites<br />
+Users --< Contacts
+<br />
 ____________________________________________
 Written by <a href="https://twitter.com/s_d_br0_o">Shawn David Broukhim</a>.

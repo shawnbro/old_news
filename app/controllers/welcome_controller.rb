@@ -12,10 +12,8 @@ class WelcomeController < ApplicationController
     articles = []
     headline_and_lead_paragraph = {}
     date = year.to_s+month.to_s+day.to_s
-    #returns front page news from a specific date
     nyt_results = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=0&api-key=#{NYTIMES_API_KEY}")
     nyt_results2 = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=1&api-key=#{NYTIMES_API_KEY}")
-    # headline_and_lead_paragraph
 
     if nyt_results["response"]["docs"].count == 0
       generate_date
