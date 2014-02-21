@@ -5,7 +5,7 @@ module ArticleHelper
     headline_and_lead_paragraph = {}
     date = year.to_s + month.to_s + day.to_s
 
-    results = [0, 1].map do |page|
+    results = [0, 1, 2].map do |page|
       HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=#{page}&api-key=#{NYTIMES_API_KEY}")["response"]["docs"]
     end.flatten
 
