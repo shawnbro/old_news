@@ -32,6 +32,4 @@ module ArticleHelper
     year = 1850 + rand(164)
     get_front_page_articles(year, month, day)
   end
-
-
 end

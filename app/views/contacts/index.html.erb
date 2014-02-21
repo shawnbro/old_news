@@ -7,8 +7,10 @@
 <div class="headline">
   <h4>You Don't Have Any Contacts </h4>
 </div>
+
 <div class="lead_paragraph">
   <p><%= link_to "Click Here to Add a Contact", new_user_contact_path(current_user) %></p>
+  
   <% else %>
     <div class="lead_paragraph">
       <p><%= link_to "Add Contact", new_user_contact_path(current_user) %></p>
@@ -20,7 +22,6 @@
           <li><%= link_to "Delete Contact", user_contact_path(current_user, {id: contact.id}), method: "delete" %>
       </li>
           <li><%= link_to "Edit Contact", edit_user_contact_path(current_user, {id: contact.id}) %></li></ul>
-      
     <% end %>
   <% end %>
   </ul>
