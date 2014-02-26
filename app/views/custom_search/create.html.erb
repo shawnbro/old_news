@@ -1,0 +1,9 @@
+<!-- create.html.erb -->
+<div class="on_this_day"
+
+ <h1>On this day in <%= @date[0] %>...</h1></div>
+
+ <%= @search_results.each do |article| %>
+ <ul>
+  <li><%= article %></li>
+  <% end %>

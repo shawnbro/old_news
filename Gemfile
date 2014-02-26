@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -37,7 +34,6 @@ end
 
 gem 'psql'
 
-gem 'pry-rails', group: [:development, :test]
 
 gem 'httparty'
 
@@ -47,6 +43,16 @@ gem 'twitter'
 gem 'rails_12factor', group: :production
 
 ruby "2.1.0"
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'

@@ -5,6 +5,8 @@ OldNews::Application.routes.draw do
     resources :favorites do 
       get "send_favorite"
     end
+    # resources :custom_search, only: [:new, :create]
+
   end
 
   root 'welcome#index'
@@ -16,6 +18,10 @@ OldNews::Application.routes.draw do
   get "/about", to: "about#index"
 
   get "/coming_soon", to: "coming_soon#index"
+
+  get "/custom_search", to: "custom_search#index"
+  post "/custom_search", to: "custom_search#create"
+  get "/search_results", to: "custom_search#show"
 
 
 end

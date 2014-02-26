@@ -15,6 +15,7 @@
   text-align: center;
   font-family: 'Didact Gothic', serif;
   font-size: 16px;
+  position: relative;
   /*text-shadow: 4px 4px 4px #aaa;*/
   padding: 12px;
 }
@@ -24,13 +25,12 @@ body {
 }
 
 .main_nav {
-  padding: 18px;
   text-align: right;
   font-family: 'Didact Gothic', serif;
   font-size: 14px;
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
-  width:95%;
+  width:100%;
 }
 
 
@@ -216,6 +216,12 @@ a:hover {
 
 #contacts_ul li {
   display: block;
+}
+
+div#old_news {
+  position: static;
+  text-align: center;
+  /*z-index: 0;*/
 }
 
  
