@@ -8,11 +8,11 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *=require normalize.css
  *= require_self
  *= require_tree .
  */
 
- @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 .header {
   text-align: center;
   font-family: 'Didact Gothic', serif;
@@ -23,8 +23,8 @@
 }
 
 h1 {
-  font-family: 'Varela Round', serif;
-  size: 24px;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 body {
@@ -265,3 +265,6 @@ h2 {
 }
  
 
+h4 > em {
+  font-size: 18px;
+}
