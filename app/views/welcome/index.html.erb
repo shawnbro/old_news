@@ -21,7 +21,7 @@
 
       <div class="lead_paragraph">
         <% if logged_in? %>  
-        <%=  link_to "#{article["lead_paragraph"]}", new_user_favorite_path(current_user, {headline: article["headline"]["main"], lead_paragraph: article["lead_paragraph"], pub_date: article["pub_date"]}) %>
+        <span><%=  link_to "#{article["lead_paragraph"]}", new_user_favorite_path(current_user, {headline: article["headline"]["main"], lead_paragraph: article["lead_paragraph"], pub_date: article["pub_date"]}) %></span>
        </div>
 
         <% else %>
