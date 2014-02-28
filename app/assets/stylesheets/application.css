@@ -61,7 +61,7 @@ body {
   padding: 12px;
 }
 
-.more_headlines a:hover {
+ a:hover {
   color: white;
   background-color: black;
 }
@@ -72,6 +72,11 @@ body {
   font-family: 'Didact Gothic', serif;
   font-size: 15px;
   padding: 24px;
+}
+
+.on_this_day h2:hover {
+  color: white;
+  background-color: black;
 }
 
 
@@ -255,6 +260,7 @@ body .div {
 h2 {
   display: inline;
   text-align: center;
+  background-color: white;
   padding: 22px;
   line-height: 6;
   letter-spacing: 0.25em;
@@ -267,4 +273,9 @@ h2 {
 
 h4 > em {
   font-size: 18px;
+}
+
+.article_space div {
+  box-shadow: 3px 3px 2px 0px rgba(55, 50, 50, 0.75);
+}
 }
