@@ -3,49 +3,37 @@
 <head>
   <title>OldNews</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="animate.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
   <script src="http://platform.tumblr.com/v1/share.js"></script>
 </head>
 
 <body>
-<div class="main_nav"
-  <ul class="nav_bar">
-
-    <li><%= link_to "Home", root_path %></li>
-
-    <% if logged_in? %>
-      
-      <li><%=link_to("My Favorites", user_favorites_path(current_user))%></li>
-      <li><%=link_to("Edit Info", edit_user_path(current_user)) %></li>
-      <li><%= link_to("View Contacts", user_contacts_path(current_user)) %></li>
-      <li><%= link_to("Custom Search", custom_search_path) %></li>
-      <li><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") %></li> 
-      <li><%= link_to("About Old News", about_path) %></li> 
-    
-    <% else %>
-      
-      <li><%= link_to("Log In","/login") %></li>
-      <li>or</li>
-      <li><%= link_to "Sign up", new_user_path %></li>
-      <li><%= link_to("About Old News", about_path) %></li>
-    
-    <% end %>
-  </ul>
-</div>
-
-<div class="header">
+  <header>
+  <div class="main_nav">
+    <ul class="nav_bar">
+        <li class><%= link_to("Log In","/login") %></li>
+        <li>or</li>
+        <li><%= link_to "Sign up", new_user_path %></li>
+        <li><%= link_to("About Old News", about_path) %></li>
+    </ul>
+  </div>
+</header>
+  <article>
   <div id="old_news"><h1>OLD NEWS</h1><h4><em>NY Times Headlines • Today's Date • Random Year</em></h4></div>
   <div class="eclesiastes"><h5><em>What has been will be again,<br />
     what has been done will be done again;<br />
     there is nothing new under the sun.<br />
     <div class="eclesiastes_name">-Ecclesiastes 1:9-</div></em></h5>
   </div>
-</div>
+</article>
+
+
 
 <%= yield %>
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
 <div class="footer">
   <footer>
@@ -53,7 +41,7 @@
       <li>Created by <a href="https://twitter.com/s_d_br0_o">s_d_br0_o</a></li>
       <li><%= link_to "About Old News", about_path %></li>
       <li><%= link_to "Home", root_path %>
-  </footer></div>
+  </footer>
 
 </body>
 </html>

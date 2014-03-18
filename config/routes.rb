@@ -10,6 +10,7 @@ OldNews::Application.routes.draw do
   end
 
   root 'welcome#index'
+  get "/articles", to: "welcome#new"
 
   get "/login", to: "session#new"
   post "/session", to: "session#create"

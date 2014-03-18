@@ -9,15 +9,15 @@ module ArticleHelper
       HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=document_type:article&begin_date=#{date}&end_date=#{date}&page=#{page}&api-key=#{NYTIMES_API_KEY}")["response"]["docs"]
     end.flatten
 
-    if results.count == 0
-      generate_date
-    else
-      articles = results.map do |result|
-        Hash["headline", result["headline"], "lead_paragraph", result["lead_paragraph"], "pub_date", result["pub_date"]]      
-      end
+    # if results.count == 0
+    #   generate_date
+    # else
+    #   articles = results.map do |result|
+    #     Hash["headline", result["headline"], "lead_paragraph", result["lead_paragraph"], "pub_date", result["pub_date"]]      
+    #   end
 
-      return articles.uniq
-    end
+    #   return articles.uniq.to_s.gsub("=>", ":")
+    # end
   end
 
   def generate_date

@@ -13,15 +13,26 @@
  *= require_tree .
  */
 
+ @import url(http://fonts.googleapis.com/css?family=PT+Serif+Caption);
+ @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
 .header {
   text-align: center;
-  font-family: 'Didact Gothic', serif;
+/*  font-family: 'PT Serif Caption', 'serif';*/
   font-size: 16px;
   position: relative;
   /*text-shadow: 4px 4px 4px #aaa;*/
   padding: 12px;
 }
 
+ul {
+  list-style-type: none;
+  padding: 1%;
+}
+
+ul.nav_bar {
+  display: inline-block;
+}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -30,13 +41,14 @@ h1 {
 body {
   background-color: #E7E7E7;
   letter-spacing: .20em;
+  font-family: "PT Serif Caption";
+  width: 100%;
 }
 
 .main_nav {
   text-align: right;
-  font-family: 'Didact Gothic', serif;
   font-size: 14px;
-  /*position: fixed;*/
+  padding-right: 2%;
   top: 0;
   width:100%;
   list-style-type: none;
@@ -44,16 +56,20 @@ body {
 
 
 .eclesiastes {
-  font-family: 'Didact Gothic', serif;
+/*  font-family: 'Didact Gothic', serif;*/
   color: #A03332;
   padding: 24px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 2%;
+  text-align:center;
 }
 
-.eclesiastes_name{
+/*.eclesiastes_name{
   text-align: center;
   font-size: 12px;
 }
-
+*/
 .more_headlines a {
   background-color: #E7E7E7;
   text-decoration: underline;
@@ -69,7 +85,7 @@ body {
 .on_this_day {
   text-align: center;
   margin: 0 auto;
-  font-family: 'Didact Gothic', serif;
+
   font-size: 15px;
   padding: 24px;
 }
@@ -83,35 +99,27 @@ body {
 .headline {
   text-align: center;
   margin: 0 auto;
-  font-family: 'Didact Gothic', serif;
   font-size: 14px;
-  padding: 12px 0;
+  padding: 2%;
   width: 50%;
   -webkit-box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.1);
-  -moz-box-shadow:    3px 3px 20px 0px rgba(50, 50, 50, 0.1);
-  box-shadow:         3px 3px 20px 0px rgba(50, 50, 50, 0.1);
-  line-height:1.5;
+  -moz-box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 3px 3px 20px 0px rgba(50, 50, 50, 0.1);
+  line-height: 1.5;
   background-color: white;
 }
 
 .lead_paragraph {
   text-align: center;
   margin: 0 auto;
-  font-family: 'Didact Gothic', serif;
   font-size: 14px;
-  padding: 0px;
+  padding: 2%;
   width: 50%;
   background: white;
-  padding: 3em 0em;
   line-height: 1.5;
   text-align: left;
   letter-spacing: .25em;
 }
-
-.lead_paragraph span {
-  padding:1.25;
-}
-
 
 
 .lead_paragraph a {
@@ -124,8 +132,6 @@ body {
   background-color: black;
   color: white; 
 }
-
-
 
 .nav_bar_li {
   display: block;
@@ -143,7 +149,6 @@ body {
 
 
 .form {
-  font-family: 'Didact Gothic', serif;
   font-size: 14px;
   text-align: center;
   margin: 0 auto;
@@ -168,7 +173,7 @@ body {
 }
 
 #errors {
-  font-family: 'Didact Gothic', serif;
+
   font-size: 14px;
   text-align: center;
   margin: 0 auto;
@@ -178,11 +183,12 @@ body {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
   padding: 18px;
-  font-family: 'Didact Gothic', serif;
   font-size: 12px;
-  text-align: center;
-  margin: 0 auto;
+  width: 100%;
+  display: inline;
 }
 
 .footer ul {
@@ -193,7 +199,7 @@ body {
 .footer_list {
   padding: 12px;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
 }
 
 .footer_list ul {
@@ -210,6 +216,7 @@ body {
 a {
   text-decoration: none;
   color: black;
+  padding: 2px;
 }
 a:hover {
   color: white;
@@ -232,6 +239,10 @@ a:hover {
 .share_buttons li {
   display: inline;
   font-size: 12px;
+}
+
+h3 {
+  padding: 2px;
 }
 
 #new_form li{
@@ -277,4 +288,9 @@ h4 > em {
 
 .article_space div {
   box-shadow: 3px 3px 2px 0px rgba(55, 50, 50, 0.75);
+}
+
+div .article {
+  padding: 12px;
+  width: 100%;
 }
