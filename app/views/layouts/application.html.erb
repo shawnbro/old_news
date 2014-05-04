@@ -5,7 +5,6 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="animate.min.css">
   <script src="http://platform.tumblr.com/v1/share.js"></script>
 </head>
 
@@ -28,20 +27,15 @@
     <div class="eclesiastes_name">-Ecclesiastes 1:9-</div></em></h5>
   </div>
 </article>
-
-
-
 <%= yield %>
+<footer>
+  <ul class="footer_list">
+    <li>Created by <a href="https://twitter.com/s_d_br0_o">s_d_br0_o</a></li>
+    <li><%= link_to "About Old News", about_path %></li>
+    <li><%= link_to "Home", root_path %>
+</footer>
+
 
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
-<div class="footer">
-  <footer>
-    <ul class="footer_list">
-      <li>Created by <a href="https://twitter.com/s_d_br0_o">s_d_br0_o</a></li>
-      <li><%= link_to "About Old News", about_path %></li>
-      <li><%= link_to "Home", root_path %>
-  </footer>
-
 </body>
 </html>
