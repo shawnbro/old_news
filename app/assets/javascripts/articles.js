@@ -13,8 +13,8 @@ $( document ).ready( function() {
     articles = response;
     $('h2').text("On this date in "+randomDate[0]+randomDate[1]+randomDate[2]+randomDate[3])
     for(var i = 0; i < articles.length; i++) {
-      $("<div class='headline' id='"+i+"'>"+articles[i]["headline"]["main"]+"</div>").appendTo(".article-space");
-      $("<div class='lead_paragraph'>"+articles[i]["lead_paragraph"]+"</div>").appendTo("div#"+i+"");
+      $("<div class='headline' id='"+i+"'>"+articles[i].headline.main+"</div>").appendTo(".article-space");
+      // $("<div class='lead_paragraph'>"+articles[i]["lead_paragraph"]+"</div>").appendTo("div#"+i+"");
     }
   })
 
