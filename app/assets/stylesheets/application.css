@@ -110,6 +110,11 @@ body {
   background-color: white;
 }
 
+.headline:hover{
+  color: white;
+  background-color: black;
+}
+
 .lead_paragraph {
   text-align: center;
   margin: 0 auto;
@@ -183,16 +188,14 @@ body {
   display: block;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
+footer {
   padding: 18px;
   font-size: 12px;
   width: 100%;
   display: inline;
 }
 
-.footer ul {
+footer ul {
   text-align: center;
 
 }
@@ -294,4 +297,8 @@ h4 > em {
 div .article {
   padding: 12px;
   width: 100%;
+}
+
+#button:hover {
+  cursor: pointer;
 }
